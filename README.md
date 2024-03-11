@@ -2,6 +2,7 @@
 ##  How I made it & my main code
 
 ## Using trimmedmean within a Go program
+This package provides a function to calculate the trimmed mean of a slice of integers or floats in Go.
 ### How it works
 The TrimmedMean function sorts the input slice in ascending order and then trims a specified proportion of elements from the lower and upper ends. It then calculates the mean of the remaining elements and returns it.
 #### Function
