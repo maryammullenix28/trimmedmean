@@ -8,12 +8,12 @@ package main
 
 import (
     "fmt"
-    "github.com/yourusername/trimmedmean" // Importing the package
+    "github.com/maryammullenix28/trimmedmean" // Importing the package
 )
 
 func main() {
     data := []float64{10, 20, 30, 40, 50}
-    trimmedMean := trimmedmean.TrimmedMean(data, 0.2) // Calculate trimmed mean with 20% trimming
+    trimmedMean := trimmedmean.TrimmedMean(data, 0.2) // Calculate trimmed mean with symmetric 20% trimming
     fmt.Println("Trimmed Mean:", trimmedMean)
 }
 ```
