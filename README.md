@@ -33,6 +33,6 @@ The code utilizes the following packages:
 - "math/rand": To generate random ints and floats for test data
 - "strings"
 - "trimmedmean": Assignement package
-- "github.com/senseyeio/roger": Roger is a Go RServe client, allowing the capabilities of R to be used from Go applications.
+- ["github.com/senseyeio/roger"](https://pkg.go.dev/github.com/senseyeio/roger): Roger is a Go RServe client, allowing the capabilities of R to be used from Go applications.
 ## Running the `main` program
 Before running the Go program, open and run RserveClient.R. This will start the R client used in `main` to run the R code on the same set of ints and floats.
