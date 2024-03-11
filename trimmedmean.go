@@ -4,13 +4,6 @@ import (
 	"sort"
 )
 
-// TrimmedMean calculates the trimmed mean of a slice of integers or floats.
-// The degreeOfTrimming arguments represent the proportions of slice elements
-// to be taken from the lower and upper ends of the slice after sorting.
-
-// If only one degreeOfTrimming argument is provided, it is assumed that the
-// trimming is symmetric.
-
 func TrimmedMean(data interface{}, degreeOfTrimming ...float64) float64 {
 	switch data := data.(type) {
 	case []float64:
@@ -25,8 +18,8 @@ func TrimmedMean(data interface{}, degreeOfTrimming ...float64) float64 {
 		// Calculate the number of elements to trim from each end
 		var trimLower, trimUpper int
 		if len(degreeOfTrimming) == 0 {
-			// Default symmetric trimming
-			trim := int(float64(len(sortedData)) * 0.1) // Default trimming proportion
+			// Default trimming
+			trim := int(float64(len(sortedData)) * 0.1)
 			trimLower, trimUpper = trim, trim
 		} else if len(degreeOfTrimming) == 1 {
 			// Symmetric trimming
@@ -59,8 +52,8 @@ func TrimmedMean(data interface{}, degreeOfTrimming ...float64) float64 {
 		// Calculate the number of elements to trim from each end
 		var trimLower, trimUpper int
 		if len(degreeOfTrimming) == 0 {
-			// Default symmetric trimming
-			trim := int(float64(len(sortedData)) * 0.1) // Default trimming proportion
+			// Default trimming
+			trim := int(float64(len(sortedData)) * 0.1)
 			trimLower, trimUpper = trim, trim
 		} else if len(degreeOfTrimming) == 1 {
 			// Symmetric trimming

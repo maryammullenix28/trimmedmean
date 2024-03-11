@@ -56,7 +56,7 @@ func main() {
 func generateRandomIntData(n int) []int64 {
 	data := make([]int64, n)
 	for i := 0; i < n; i++ {
-		data[i] = int64(rand.Intn(100)) // Generate random integers between 0 and 99
+		data[i] = int64(rand.Intn(100)) // Generate random integers between 0 and 100
 	}
 	return data
 }
