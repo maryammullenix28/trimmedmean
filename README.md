@@ -1,8 +1,32 @@
 # Create a Go Package
-##  How I made it & my main code
-
+### Implementation of `main`
+The code utilizes the following packages:
+- "fmt"
+- "math/rand": To generate random ints and floats for test data
+- "strings"
+- "trimmedmean": Assignement package
+- "github.com/senseyeio/roger": Roger is a Go RServe client, allowing the capabilities of R to be used from Go applications.
+### Running the `main` program
+Before running the Go program, open and run RserveClient.R. This will start the R client used in `main` to run the R code on the same set of ints and floats.
+# Trimmed Mean Package
 ## Using trimmedmean within a Go program
 This package provides a function to calculate the trimmed mean of a slice of integers or floats in Go.
+#### Example
+```
+package main
+
+import (
+    "fmt"
+    "github.com/yourusername/trimmedmean" // Importing the package
+)
+
+func main() {
+    data := []float64{10, 20, 30, 40, 50}
+    trimmedMean := trimmedmean.TrimmedMean(data, 0.2) // Calculate trimmed mean with 20% trimming
+    fmt.Println("Trimmed Mean:", trimmedMean)
+}
+```
+
 ### How it works
 The TrimmedMean function sorts the input slice in ascending order and then trims a specified proportion of elements from the lower and upper ends. It then calculates the mean of the remaining elements and returns it.
 #### Function
