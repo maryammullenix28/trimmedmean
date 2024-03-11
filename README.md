@@ -8,7 +8,7 @@ package main
 
 import (
     "fmt"
-    "github.com/maryammullenix28/trimmedmean" // Importing the package
+    "github.com/maryammullenix28/trimmedmean"
 )
 
 func main() {
